@@ -6,17 +6,13 @@ namespace PuneCarRideApi.model
     {
         public int BookingId { get; set; }
         public string From { get; set; }
-
         public string To { get; set; }
-
-        public DateTime PickUpDate { get; set; }
-
-        public DateTime DropDate { get; set; }
-
+        public string PickUpDate { get; set; }
+        public string DropDate { get; set; }
         public string CustomerPhoneNumber { get; set; }
-
         public string CustomerAddress { get; set; }
-        
         public string TripCharges { get; set; }
+
+        public string CustomerName { get; set; }
     }
 }

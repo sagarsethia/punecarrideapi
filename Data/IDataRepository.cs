@@ -13,6 +13,9 @@ namespace PuneCarRideApi.Data
 
         public Task<ListedDestinations> GetListedDestinations();
 
+        public void bookPackage<T> (T entity) where T:class;
+        
+        public Task<bool> SaveAll();
 
         
     }

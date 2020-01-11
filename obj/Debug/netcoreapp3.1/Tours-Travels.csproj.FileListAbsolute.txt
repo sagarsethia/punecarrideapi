@@ -45,3 +45,9 @@ D:\Tours-Travels\PuneCarRideApi\obj\Debug\netcoreapp3.1\Tours-Travels.csproj.Cop
 D:\Tours-Travels\PuneCarRideApi\obj\Debug\netcoreapp3.1\Tours-Travels.dll
 D:\Tours-Travels\PuneCarRideApi\obj\Debug\netcoreapp3.1\Tours-Travels.pdb
 D:\Tours-Travels\PuneCarRideApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Tours-Travels\PuneCarRideApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Tours-Travels\PuneCarRideApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Tours-Travels\PuneCarRideApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Tours-Travels\PuneCarRideApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Tours-Travels\PuneCarRideApi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Tours-Travels\PuneCarRideApi\bin\Debug\netcoreapp3.1\Twilio.dll

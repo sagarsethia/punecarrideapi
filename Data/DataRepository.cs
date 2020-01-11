@@ -39,5 +39,13 @@ namespace PuneCarRideApi.Data
                 .FirstOrDefaultAsync();
             
         }
+         public void bookPackage<T> (T entity) where T:class{
+           _dbContext.Add(entity);
+        }
+
+        public async Task<bool> SaveAll () {
+            return await _dbContext.SaveChangesAsync() > 0;
+        }
+
     }
 }

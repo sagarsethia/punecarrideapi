@@ -10,8 +10,8 @@ using PuneCarRideApi.Data;
 namespace Tours_Travels.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200105133118_punecaride")]
-    partial class punecaride
+    [Migration("20200111072449_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,6 +29,9 @@ namespace Tours_Travels.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("CustomerAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CustomerPhoneNumber")
@@ -129,16 +132,31 @@ namespace Tours_Travels.Migrations
 
             modelBuilder.Entity("PuneCarRideApi.model.Package", b =>
                 {
-                    b.Property<string>("PackageId")
+                    b.Property<string>("id")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("DestinationId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("NumberOfDay")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PackageName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.HasKey("PackageId");
+                    b.Property<string>("VechileCapacity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VechileExample")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VechileType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
 
                     b.HasIndex("DestinationId");
 
@@ -171,30 +189,6 @@ namespace Tours_Travels.Migrations
                     b.ToTable("Spots");
                 });
 
-            modelBuilder.Entity("PuneCarRideApi.model.Vechiles", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Capacity")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Cars")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PackageId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Type")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PackageId");
-
-                    b.ToTable("Vechiles");
-                });
-
             modelBuilder.Entity("PuneCarRideApi.model.Package", b =>
                 {
                     b.HasOne("PuneCarRideApi.model.Destination", null)
@@ -207,13 +201,6 @@ namespace Tours_Travels.Migrations
                     b.HasOne("PuneCarRideApi.model.Destination", null)
                         .WithMany("Spots")
                         .HasForeignKey("DestinationId");
-                });
-
-            modelBuilder.Entity("PuneCarRideApi.model.Vechiles", b =>
-                {
-                    b.HasOne("PuneCarRideApi.model.Package", null)
-                        .WithMany("VechileType")
-                        .HasForeignKey("PackageId");
                 });
 #pragma warning restore 612, 618
         }
