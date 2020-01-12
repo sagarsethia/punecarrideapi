@@ -12,5 +12,9 @@ namespace PuneCarRideApi.model
         public string Route { get; set; }
         public ICollection<Spots> Spots{get; set;}
         public ICollection<Package> Packages { get; set; }
+        public string Category{get;set;}
+        
+        public string ThingsToDo {get;set;}
+        public int Sequence{get;set;}
     }
 } 

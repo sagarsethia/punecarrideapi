@@ -15,7 +15,7 @@ namespace PuneCarRideApi.Data
         }
         public async Task<List<Destination>> getAllDestination()
         {
-           var destination= await _dbContext.Destinations.ToListAsync();
+           var destination= await _dbContext.Destinations.Where(r=>r.Category=="A").OrderBy(r=>r.Sequence).ToListAsync();
 
            return destination;
         }
